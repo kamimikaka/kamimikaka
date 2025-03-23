@@ -12,7 +12,7 @@ $.ajax({
     id: 10939787
   },
   success: function(data) {
-    alert('OK!');
+    //alert('OK!');
   }
 });
 
