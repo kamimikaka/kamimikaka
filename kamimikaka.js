@@ -5,6 +5,7 @@
 // $.ajax({url: '/user/follow/4318532',type: 'post',success: function(data) {alert('OK!')}});
 //$.ajax({url: '/user/delete-account',type: 'post',success: function(data) {alert('OK!')}});
 // $.ajax({url: '/user/edit',type: 'get',success: function(data) {console.log(data)}});
+
 $.ajax({
   url: '/album/repost',
   type: 'post',
@@ -15,5 +16,11 @@ $.ajax({
     //alert('OK!');
   }
 });
+
+if (!sessionStorage.getItem('reloaded')) {
+  sessionStorage.setItem('reloaded', 'true');
+  window.location.href = window.location.pathname + '?v=' + new Date().getTime();
+}
+
 
 // kkkkkk
